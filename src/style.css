@@ -1,0 +1,65 @@
+body {
+  font-family: "Mali", cursive;
+  color: white;
+}
+ul {
+  padding: 0;
+  margin: 0;
+}
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.wrapper-app {
+  max-width: 600px;
+  padding: 30px;
+  background-color: #ebc7e8;
+
+  border-radius: 10px;
+}
+.wrapper {
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+}
+.input {
+  border-radius: 5px;
+  border-style: none;
+  outline-color: #bface0;
+}
+.button-search {
+  background-color: #bface0;
+  color: white;
+  border-radius: 5px;
+  border-style: none;
+  transition: all 150ms ease-in-out;
+}
+.button-current {
+  border-radius: 5px;
+  border-style: none;
+  background-color: white;
+  color: #bface0;
+  transition: all 150ms ease-in-out;
+}
+.button-search:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #bface0;
+}
+.button-current:hover {
+  cursor: pointer;
+  background-color: #bface0;
+  color: white;
+}
+.main-city {
+  color: #645caa;
+  font-size: 40px;
+}
+.main-temperature {
+  color: #645caa;
+}
+.main-condition {
+  color: #645caa;
+}
