@@ -1,6 +1,6 @@
 body {
   font-family: "Mali", cursive;
-  color: white;
+  color: #413f42;
 }
 ul {
   padding: 0;
@@ -11,16 +11,18 @@ li {
   margin: 0;
   list-style: none;
 }
-
+a {
+  color: #645caa;
+}
 .wrapper-app {
-  max-width: 600px;
+  max-width: 350px;
   padding: 30px;
   background-color: #ebc7e8;
 
   border-radius: 10px;
 }
 .wrapper {
-  max-width: 600px;
+  max-width: 350px;
   display: block;
   margin: 20px auto;
 }
@@ -28,16 +30,25 @@ li {
   border-radius: 5px;
   border-style: none;
   outline-color: #bface0;
+  margin: 0 auto;
+  display: block;
+  padding: 5px;
+  width: 300px;
 }
 .button-search {
   background-color: #bface0;
   color: white;
-  border-radius: 5px;
+  border-radius: 30px;
   border-style: none;
   transition: all 150ms ease-in-out;
+  padding: 7px;
+  float: right;
+  width: 130px;
 }
 .button-current {
-  border-radius: 5px;
+  width: 138px;
+  border-radius: 30px;
+  padding: 7px;
   border-style: none;
   background-color: white;
   color: #bface0;
@@ -55,11 +66,23 @@ li {
 }
 .main-city {
   color: #645caa;
-  font-size: 40px;
+  font-size: 45px;
+  text-align: center;
 }
 .main-temperature {
   color: #645caa;
+  font-size: 25px;
 }
+.date {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
 .main-condition {
   color: #645caa;
+  font-size: 20px;
+}
+.col-4 {
+  margin-top: 15px;
 }
