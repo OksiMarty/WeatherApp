@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
@@ -27,16 +28,17 @@
         <button class="button-search">Search</button>
         <br />
         <button class="button-current">Forecast for your current location</button>
-     <div class="main-city">Sudak</div>
+     <div class="main-city" id="main-city"></div>
 
         <div class="date">12:23 Monday September 2022</div>
           <div class="row">
            <div class="col-6">
             <ul>
-              <li class="main-temperature">20°C|°F</li>
-              <li class="main-condition">Clear</li>
-              <li class="main-wind">Wind: 5m/s</li>
-              <li class="main-humidity">Humidity: 70%</li>
+              <li class="main-temperature">
+                <span id="main-temperature"></span>°C|°F</li>
+              <li class="main-condition" id="main-condition" ></li>
+              <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H</li>
+              <li class="main-humidity">Humidity: <span id ="main-humidity"></span>%</li>
             </ul>
           </div><div class="col-6">
             <img src="src/icons/sun/6.png" width = 140 alt="Clear" class="main-image"/>
