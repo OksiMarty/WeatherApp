@@ -4,7 +4,7 @@ body {
 }
 ul {
   padding: 0;
-  margin: 0;
+  margin-left: 15px;
 }
 li {
   padding: 0;
@@ -15,14 +15,14 @@ a {
   color: #645caa;
 }
 .wrapper-app {
-  max-width: 350px;
+  max-width: 340px;
   padding: 30px;
   background-color: #ebc7e8;
 
   border-radius: 10px;
 }
 .wrapper {
-  max-width: 350px;
+  max-width: 340px;
   display: block;
   margin: 20px auto;
 }
