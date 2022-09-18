@@ -83,13 +83,40 @@ function showWeather(response) {
   document
     .querySelector("#main-image")
     .setAttribute("src", newIcon(response.data.weather[0].icon));
-     document
-       .querySelector("#main-image")
-       .setAttribute("alt", response.data.weather[0].description);
-    
+  document
+    .querySelector("#main-image")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
-let key = "27218fb510ea3727370c3caaa80041fc";
-let city = "Sydney";
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
-axios.get(url).then(showWeather);
+function search(city) {
+  let key = "27218fb510ea3727370c3caaa80041fc";
+
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
+  axios.get(url).then(showWeather);
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let inputCity = document.querySelector("#input");
+  search(inputCity.value);
+}
+
+search("Las Vegas");
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
+
+function searchCity(position) {
+  let longitude = position.coords.longitude;
+  let latitude = position.coords.latitude;
+  let key = "27218fb510ea3727370c3caaa80041fc";
+  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
+  axios.get(url).then(showWeather);
+}
+
+function handleCurrentSubmit(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(searchCity);
+}
+
+let current = document.querySelector("#button-current");
+current.addEventListener("click", handleCurrentSubmit);
