@@ -94,3 +94,9 @@ a {
 .col-4 {
   margin-top: 15px;
 }
+.update,
+.date {
+  margin-top: 7px;
+  font-size: 12px;
+  text-align: center;
+}

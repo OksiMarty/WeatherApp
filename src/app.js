@@ -120,3 +120,13 @@ function handleCurrentSubmit(event) {
 
 let current = document.querySelector("#button-current");
 current.addEventListener("click", handleCurrentSubmit);
+
+function showFahrenheit(event) {
+  event.preventDefault();
+  let fahrenheitTemperature = (0 * 9) / 5 + 32;
+  let temperature = document.querySelector("#main-temperature");
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheit);
