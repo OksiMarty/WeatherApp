@@ -65,10 +65,9 @@ function newIcon(icon) {
   }
 }
 function showWeather(response) {
+  celsius = response.data.main.temp;
   document.querySelector("#main-city").innerHTML = response.data.name;
-  document.querySelector("#main-temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#main-temperature").innerHTML = Math.round(celsius);
   document.querySelector("#main-condition").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#main-wind").innerHTML = Math.round(
@@ -101,10 +100,6 @@ function handleSubmit(event) {
   search(inputCity.value);
 }
 
-search("Las Vegas");
-let form = document.querySelector("#form");
-form.addEventListener("submit", handleSubmit);
-
 function searchCity(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
@@ -123,10 +118,30 @@ current.addEventListener("click", handleCurrentSubmit);
 
 function showFahrenheit(event) {
   event.preventDefault();
-  let fahrenheitTemperature = (0 * 9) / 5 + 32;
   let temperature = document.querySelector("#main-temperature");
+  let fahrenheitTemperature = (celsius * 9) / 5 + 32;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
   temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrenheit = document.querySelector("#fahrenheit");
-fahrenheit.addEventListener("click", showFahrenheit);
+function showCelsius(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#main-temperature");
+  temperature.innerHTML = Math.round(celsius);
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+}
+let celsius = null;
+
+let form = document.querySelector("#form");
+form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsius);
+
+search("Las Vegas");

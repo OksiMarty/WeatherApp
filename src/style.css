@@ -97,6 +97,14 @@ a {
 .update,
 .date {
   margin-top: 7px;
-  font-size: 12px;
+  font-size: 10px;
   text-align: center;
+}
+.active {
+  text-decoration: none;
+  font-size: 25px;
+  cursor: default;
+}
+.metrics {
+  font-size: 20px;
 }

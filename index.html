@@ -24,14 +24,15 @@
     <div class="container">
       <div class="wrapper">
         <div class="wrapper-app">
-          <form id="form">
+          
+           <form id="form">
         <input type="search" placeholder="Enter your city" class="input" id="input" autocomplete="off" />
         <input type="submit" value = "Search" class="button-search">
         
         </form>
         <button class="button-current" id="button-current">Forecast for your current location</button>
-        <div id="update" class="update">Last update: <span class="date" id="date"></span> </div>
-        
+       
+         <div id="update" class="update">Last update: <span class="date" id="date"></span> </div>
         
      <div class="main-city" id="main-city"></div>
 
@@ -40,7 +41,7 @@
            <div class="col-6">
             <ul>
               <li class="main-temperature">
-                <span id="main-temperature"></span>°C| <a href="#" id = "fahrenheit">°F</a> </li>
+                <span id="main-temperature"></span><span>°</span ><span class="metrics"><a href="#" id = "celsius" class = "active">C</a>|<a href="#" id = "fahrenheit" >F</a></span> </li>
               <li class="main-condition" id="main-condition" ></li>
               <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H</li>
               <li class="main-humidity">Humidity: <span id ="main-humidity"></span>%</li>
