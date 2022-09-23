@@ -64,6 +64,27 @@ function newIcon(icon) {
     return `src/icons/scattered clouds night.png`;
   }
 }
+function displayForecast() {
+  let dayForecast = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                <div class="forecast-day">${day}</div>
+                <img src="src/icons/few clouds night.png" class="forecast-image" width = 30 alt="clear" class="main-image" id="main-image"/>
+          <div class="forecast-temp">
+            <span class="forecast-temp-max">18°</span> <span class="forecast-temp-min">12°</span>
+             </div>
+              
+            </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  dayForecast.innerHTML = forecastHTML;
+}
+
 function showWeather(response) {
   celsius = response.data.main.temp;
   document.querySelector("#main-city").innerHTML = response.data.name;
@@ -145,3 +166,4 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("Las Vegas");
+displayForecast();

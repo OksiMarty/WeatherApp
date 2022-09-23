@@ -15,14 +15,14 @@ a {
   color: #645caa;
 }
 .wrapper-app {
-  max-width: 350px;
+  max-width: 450px;
   padding: 30px;
   background-color: #ebc7e8;
 
   border-radius: 10px;
 }
 .wrapper {
-  max-width: 350px;
+  max-width: 450px;
   display: block;
   margin: 20px auto;
 }
@@ -107,4 +107,13 @@ a {
 }
 .metrics {
   font-size: 20px;
+}
+.forecast-day,
+.forecast-temp {
+  font-size: 14px;
+  text-align: center;
+}
+.forecast-image {
+  display: block;
+  margin: 0 auto;
 }
