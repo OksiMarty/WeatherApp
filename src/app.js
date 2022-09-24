@@ -64,20 +64,26 @@ function newIcon(icon) {
     return `src/icons/scattered clouds night.png`;
   }
 }
-//function changeImage(icon) {
-//document.querySelector("#forecast-image").setAttribute("src", newIcon(icon));
-//}
+
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let dayofweek = day[date.getDay()];
+  return dayofweek;
+}
 function displayForecast(response) {
   console.log(response.data.daily);
   let forecast = response.data.daily;
   let dayForecast = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-3">
-                <div class="forecast-day">${forecastDay.dt}</div>
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML += `<div class="col-2">
+                <div class="forecast-day">${formatForecastDay(
+                  forecastDay.dt
+                )}</div>
+              
                 <img src= '${newIcon(forecastDay.weather[0].icon)}'
                    class="forecast-image" width = 30 alt="clear" id="forecast-image"/>
           <div class="forecast-temp">
@@ -89,20 +95,10 @@ function displayForecast(response) {
              </div>
              </div>
               `;
+    }
   });
   forecastHTML = forecastHTML + `</div>`;
   dayForecast.innerHTML = forecastHTML;
-  //"http://openweathermap.org/img/wn/${
-  //              forecastDay.weather[0].icon
-  //          }@2x.png"
-  //document
-  //.querySelector("#forecast-image")
-  //.setAttribute("src", newIcon(.weather[0].icon));
-  //document
-  //.querySelector("#forecast-image")
-  //.setAttribute("src", newIcon(response.data.daily[0].weather[0].icon));
-  //changeImage(response.data.daily[0].weather[0].icon);
-  //"http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
 }
 
 function showForecast(coordinates) {
