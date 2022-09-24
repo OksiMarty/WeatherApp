@@ -64,25 +64,51 @@ function newIcon(icon) {
     return `src/icons/scattered clouds night.png`;
   }
 }
-function displayForecast() {
+//function changeImage(icon) {
+//document.querySelector("#forecast-image").setAttribute("src", newIcon(icon));
+//}
+function displayForecast(response) {
+  console.log(response.data.daily);
+  let forecast = response.data.daily;
   let dayForecast = document.querySelector("#forecast");
-  let days = ["Thu", "Fri", "Sat", "Sun"];
+
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
-      `<div class="col-2">
-                <div class="forecast-day">${day}</div>
-                <img src="src/icons/few clouds night.png" class="forecast-image" width = 30 alt="clear" class="main-image" id="main-image"/>
+      `<div class="col-3">
+                <div class="forecast-day">${forecastDay.dt}</div>
+                <img src= "http://openweathermap.org/img/wn/${
+                  forecastDay.weather[0].icon
+                }@2x.png"
+                   class="forecast-image" width = 30 alt="clear" id="forecast-image"/>
           <div class="forecast-temp">
-            <span class="forecast-temp-max">18°</span> <span class="forecast-temp-min">12°</span>
+            <span class="forecast-temp-max">${Math.round(
+              forecastDay.temp.max
+            )}°</span> <span class="forecast-temp-min">${Math.round(
+        forecastDay.temp.min
+      )}°</span>
              </div>
-              
-            </div>`;
+             </div>
+              `;
   });
-
   forecastHTML = forecastHTML + `</div>`;
   dayForecast.innerHTML = forecastHTML;
+
+  //document
+  //.querySelector("#forecast-image")
+  //.setAttribute("src", newIcon(.weather[0].icon));
+  //document
+  //.querySelector("#forecast-image")
+  //.setAttribute("src", newIcon(response.data.daily[0].weather[0].icon));
+  //changeImage(response.data.daily[0].weather[0].icon);
+  //"http://openweathermap.org/img/wn/${forecastDay.weather[0].icon}@2x.png"
+}
+
+function showForecast(coordinates) {
+  let key = "40b745c14eadad7b7c4e6e4bf3b70103";
+  let apiURL = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric`;
+  axios.get(apiURL).then(displayForecast);
 }
 
 function showWeather(response) {
@@ -106,10 +132,11 @@ function showWeather(response) {
   document
     .querySelector("#main-image")
     .setAttribute("alt", response.data.weather[0].description);
+  showForecast(response.data.coord);
 }
 
 function search(city) {
-  let key = "27218fb510ea3727370c3caaa80041fc";
+  let key = "40b745c14eadad7b7c4e6e4bf3b70103";
 
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
   axios.get(url).then(showWeather);
@@ -124,7 +151,7 @@ function handleSubmit(event) {
 function searchCity(position) {
   let longitude = position.coords.longitude;
   let latitude = position.coords.latitude;
-  let key = "27218fb510ea3727370c3caaa80041fc";
+  let key = "40b745c14eadad7b7c4e6e4bf3b70103";
   let url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}&units=metric`;
   axios.get(url).then(showWeather);
 }
@@ -166,4 +193,3 @@ let celsiusLink = document.querySelector("#celsius");
 celsiusLink.addEventListener("click", showCelsius);
 
 search("Las Vegas");
-displayForecast();
