@@ -78,9 +78,7 @@ function displayForecast(response) {
       forecastHTML +
       `<div class="col-3">
                 <div class="forecast-day">${forecastDay.dt}</div>
-                <img src= "http://openweathermap.org/img/wn/${
-                  forecastDay.weather[0].icon
-                }@2x.png"
+                <img src= '${newIcon(forecastDay.weather[0].icon)}'
                    class="forecast-image" width = 30 alt="clear" id="forecast-image"/>
           <div class="forecast-temp">
             <span class="forecast-temp-max">${Math.round(
@@ -94,7 +92,9 @@ function displayForecast(response) {
   });
   forecastHTML = forecastHTML + `</div>`;
   dayForecast.innerHTML = forecastHTML;
-
+  //"http://openweathermap.org/img/wn/${
+  //              forecastDay.weather[0].icon
+  //          }@2x.png"
   //document
   //.querySelector("#forecast-image")
   //.setAttribute("src", newIcon(.weather[0].icon));
