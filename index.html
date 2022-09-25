@@ -22,10 +22,7 @@
   </head>
   <body>
     <div class="container">
-      
-
-          
-           <form id="form">
+    <form id="form">
         <input type="search" placeholder="Enter your city" class="input" id="input" autocomplete="off" />
        
         <input type="submit" value = "Search" class="button-search">
@@ -42,27 +39,34 @@
 
         
           <div class="row">
-           <div class="col-6">
+           <div class="col-3">
             <ul>
               <li class="main-temperature">
                 <span id="main-temperature"></span>
-                <span class = "metrics">°C</span>
-              <span class="main-condition" id="main-condition" ></span></li>
-              <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H
-              <span class="main-humidity">Humidity: <span id ="main-humidity"></span>%</span></li>
+                <span class = "metrics">°C</span></li>
+                <li>
+                  <span class="main-condition" id="main-condition" ></span>
+                </li>
+              </ul>
+              </div>
+<div class="col-3">
+              <ul>
+              <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H </li>
+              <li class="main-humidity">Humidity: <span id ="main-humidity"></span>%</li>
             </ul>
-          <div class="forecast" id="forecast">
-          
-          </div></div>
-          
-          <div class="col-6">
-            <img src="" width = 460 alt="clear" class="main-image" id="main-image"/>
-          </div>
          
-          <footer>
+          </div>
+          <div class="col-6">
+            <img src="" width = 300 alt="clear" class="main-image" id="main-image"/>
+          </div>
+         <div class="forecast" id="forecast"> </div>
+          
+          
+        
+          <div class="coder">
         <a href="https://github.com/OksiMarty/WeatherApp" target="_blank">Open-source code</a>
          by Oksy Marty
-      </footer></div>
+          </div></div>
     <script src="src/app.js"></script>
   </body>
 </html>

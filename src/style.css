@@ -3,15 +3,10 @@ body {
   color: #413f42;
   background-color: #ebc7e8;
   margin-top: 40px;
-  margin-left: 100px;
+  margin-left: 40px;
 }
-ul {
-  padding: 0;
-  margin-left: 15px;
-}
+
 li {
-  padding: 0;
-  margin: 0;
   list-style: none;
 }
 a {
@@ -27,7 +22,7 @@ a {
   outline-color: #bface0;
 
   padding: 10px;
-  width: 750px;
+  width: 500px;
   margin-right: 5px;
 }
 .button-search {
@@ -40,7 +35,7 @@ a {
   transition: all 150ms ease-in-out;
   padding: 11px;
 
-  width: 120px;
+  width: 150px;
 }
 .button-current {
   font-size: 13px;
@@ -53,7 +48,7 @@ a {
   font-size: 15px;
   padding: 10px;
 
-  width: 120px;
+  width: 150px;
 }
 
 .button-search:hover {
@@ -68,38 +63,38 @@ a {
 }
 .main-city {
   color: #645caa;
-  font-size: 80px;
+  font-size: 90px;
   font-weight: 500;
   text-align: left;
-  margin-top: 10px;
 }
 .main-temperature {
   color: #645caa;
   font-size: 40px;
-  margin-left: -15px;
+  margin-left: -25px;
 }
 
 .main-condition {
-  color: #645caa;
-  font-size: 35px;
+  color: hsl(246, 31%, 51%);
+  font-size: 30px;
   text-transform: capitalize;
-  margin-left: 70px;
+  margin-left: -25px;
 }
 .main-wind {
-  margin-top: 20px;
   font-size: 30px;
   opacity: 0.8;
-  margin-left: -15px;
+  margin-left: -35px;
+  margin-bottom: 15px;
 }
 .main-humidity {
   font-size: 30px;
   opacity: 0.8;
-  margin-left: 20px;
+  margin-left: -35px;
 }
 .update {
   margin-top: 15px;
-  font-size: 13px;
+  font-size: 15px;
   text-align: left;
+  opacity: 0.8;
 }
 
 .metrics {
@@ -107,18 +102,23 @@ a {
 }
 .main-image {
   margin-top: -130px;
+  margin-left: -50px;
 }
 
 .forecast {
-  margin-top: 50px;
-  margin-left: -10px;
+  margin-top: 15px;
+  margin-bottom: 35px;
+  margin-left: -40px;
 }
 .forecast-day,
 .forecast-temp {
-  font-size: 16px;
+  font-size: 20px;
   text-align: center;
 }
 .forecast-image {
   display: block;
   margin: 0 auto;
+}
+.coder {
+  font-size: 13px;
 }
