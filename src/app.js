@@ -84,7 +84,7 @@ function displayForecast(response) {
                 )}</div>
               
                 <img src= '${newIcon(forecastDay.weather[0].icon)}'
-                   class="forecast-image" width = 60 alt="clear" id="forecast-image"/>
+                   class="forecast-image" width = 60 height = 60 alt="clear" id="forecast-image"/>
           
                    <div class="forecast-temp">
             <span class="forecast-temp-max">${Math.round(
