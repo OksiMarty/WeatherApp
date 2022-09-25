@@ -160,32 +160,7 @@ function handleCurrentSubmit(event) {
 let current = document.querySelector("#button-current");
 current.addEventListener("click", handleCurrentSubmit);
 
-function showFahrenheit(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#main-temperature");
-  let fahrenheitTemperature = (celsius * 9) / 5 + 32;
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-
-  temperature.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function showCelsius(event) {
-  event.preventDefault();
-  let temperature = document.querySelector("#main-temperature");
-  temperature.innerHTML = Math.round(celsius);
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-}
-let celsius = null;
-
 let form = document.querySelector("#form");
 form.addEventListener("submit", handleSubmit);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsius);
 
 search("Las Vegas");
