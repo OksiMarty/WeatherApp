@@ -1,6 +1,9 @@
 body {
   font-family: "Mali", cursive;
   color: #413f42;
+  background-color: #ebc7e8;
+  margin-top: 40px;
+  margin-left: 100px;
 }
 ul {
   padding: 0;
@@ -14,49 +17,43 @@ li {
 a {
   color: #645caa;
 }
-.wrapper-app {
-  max-width: 450px;
-  padding: 30px;
-  background-color: #ebc7e8;
+.container {
+  margin-left: 20px;
+}
 
-  border-radius: 10px;
-}
-.wrapper {
-  max-width: 450px;
-  display: block;
-  margin: 20px auto;
-}
 .input {
   border-radius: 5px;
   border-style: none;
   outline-color: #bface0;
 
-  padding: 5px;
-  width: 203px;
+  padding: 10px;
+  width: 750px;
+  margin-right: 5px;
 }
 .button-search {
   font-size: 14px;
   background-color: #bface0;
-  color: #645caa;
+  color: white;
 
   border-radius: 30px;
   border-style: none;
   transition: all 150ms ease-in-out;
-  padding: 7px;
+  padding: 11px;
 
-  width: 80px;
+  width: 120px;
 }
 .button-current {
   font-size: 13px;
   background-color: #bface0;
-  color: white;
+  color: #645caa;
   border-radius: 30px;
   border-style: none;
   transition: all 150ms ease-in-out;
 
-  margin-top: 10px;
   font-size: 15px;
-  width: 290px;
+  padding: 10px;
+
+  width: 120px;
 }
 
 .button-search:hover {
@@ -71,42 +68,54 @@ a {
 }
 .main-city {
   color: #645caa;
-  font-size: 45px;
+  font-size: 80px;
   font-weight: 500;
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
 }
 .main-temperature {
   color: #645caa;
-  font-size: 25px;
-}
-.date {
-  text-align: center;
-  font-size: 15px;
-  margin-bottom: 10px;
+  font-size: 40px;
+  margin-left: -15px;
 }
 
 .main-condition {
   color: #645caa;
-  font-size: 20px;
+  font-size: 35px;
   text-transform: capitalize;
+  margin-left: 70px;
 }
-.col-4 {
+.main-wind {
+  margin-top: 20px;
+  font-size: 30px;
+  opacity: 0.8;
+  margin-left: -15px;
+}
+.main-humidity {
+  font-size: 30px;
+  opacity: 0.8;
+  margin-left: 20px;
+}
+.update {
   margin-top: 15px;
-}
-.update,
-.date {
-  margin-top: 7px;
-  font-size: 10px;
-  text-align: center;
+  font-size: 13px;
+  text-align: left;
 }
 
 .metrics {
-  font-size: 20px;
+  font-size: 40px;
+}
+.main-image {
+  margin-top: -130px;
+}
+
+.forecast {
+  margin-top: 50px;
+  margin-left: -10px;
 }
 .forecast-day,
 .forecast-temp {
-  font-size: 14px;
+  font-size: 16px;
   text-align: center;
 }
 .forecast-image {

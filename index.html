@@ -22,17 +22,21 @@
   </head>
   <body>
     <div class="container">
-      <div class="wrapper">
-        <div class="wrapper-app">
+      
+
           
            <form id="form">
         <input type="search" placeholder="Enter your city" class="input" id="input" autocomplete="off" />
+       
         <input type="submit" value = "Search" class="button-search">
         
-        </form>
-        <button class="button-current" id="button-current">Forecast for your current location</button>
+        
+          
+          <button class="button-current" id="button-current">Current</button>
+       </form>
        
-         <div id="update" class="update">Last updated: <span class="date" id="date"></span> </div>
+       <div id="update" class="update">Updated: <span class="date" id="date"></span> </div>
+       
         
      <div class="main-city" id="main-city"></div>
 
@@ -42,22 +46,20 @@
             <ul>
               <li class="main-temperature">
                 <span id="main-temperature"></span>
-                <span class = "metrics">°C</span></li>
-              <li class="main-condition" id="main-condition" ></li>
-              <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H</li>
-              <li class="main-humidity">Humidity: <span id ="main-humidity"></span>%</li>
+                <span class = "metrics">°C</span>
+              <span class="main-condition" id="main-condition" ></span></li>
+              <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H
+              <span class="main-humidity">Humidity: <span id ="main-humidity"></span>%</span></li>
             </ul>
-          </div><div class="col-6">
-            <img src="" width = 140 alt="clear" class="main-image" id="main-image"/>
-          </div>
-         
           <div class="forecast" id="forecast">
           
+          </div></div>
+          
+          <div class="col-6">
+            <img src="" width = 460 alt="clear" class="main-image" id="main-image"/>
           </div>
-        </div>
-      </div>
-    
-      <footer>
+         
+          <footer>
         <a href="https://github.com/OksiMarty/WeatherApp" target="_blank">Open-source code</a>
          by Oksy Marty
       </footer></div>

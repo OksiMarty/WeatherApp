@@ -72,7 +72,6 @@ function formatForecastDay(timestamp) {
   return dayofweek;
 }
 function displayForecast(response) {
-  console.log(response.data.daily);
   let forecast = response.data.daily;
   let dayForecast = document.querySelector("#forecast");
 
@@ -85,8 +84,9 @@ function displayForecast(response) {
                 )}</div>
               
                 <img src= '${newIcon(forecastDay.weather[0].icon)}'
-                   class="forecast-image" width = 30 alt="clear" id="forecast-image"/>
-          <div class="forecast-temp">
+                   class="forecast-image" width = 50 alt="clear" id="forecast-image"/>
+          
+                   <div class="forecast-temp">
             <span class="forecast-temp-max">${Math.round(
               forecastDay.temp.max
             )}°</span> <span class="forecast-temp-min">${Math.round(
