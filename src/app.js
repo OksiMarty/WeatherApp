@@ -86,7 +86,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 6) {
-      forecastHTML += `<div class="col-2">
+      forecastHTML += `<div class="col-md-2">
                 <div class="forecast-day">${formatForecastDay(
                   forecastDay.dt
                 )}</div>
