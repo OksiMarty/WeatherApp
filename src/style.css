@@ -2,53 +2,53 @@ body {
   font-family: "Mali", cursive;
   color: #413f42;
   background-color: #ebc7e8;
-  margin-top: 40px;
-  margin-left: 40px;
+  margin: 30px 100px 0 100px;
 }
 
 li {
   list-style: none;
 }
+
 a {
   color: #645caa;
 }
 .container {
-  margin-left: 20px;
+  margin: 0;
+  padding: 0;
 }
-
 .input {
   border-radius: 5px;
   border-style: none;
   outline-color: #bface0;
 
   padding: 10px;
-  width: 500px;
-  margin-right: 5px;
+  width: 100%;
+  margin-right: 10px;
 }
 .button-search {
-  font-size: 14px;
+  font-size: 20px;
+  font-weight: 500;
   background-color: #bface0;
   color: white;
 
   border-radius: 30px;
   border-style: none;
   transition: all 150ms ease-in-out;
-  padding: 11px;
+  padding: 8px;
 
-  width: 150px;
+  width: 100%;
 }
 .button-current {
-  font-size: 13px;
+  font-size: 20px;
+  font-weight: 500;
   background-color: #bface0;
   color: #645caa;
   border-radius: 30px;
   border-style: none;
   transition: all 150ms ease-in-out;
+  padding: 8px;
 
-  font-size: 15px;
-  padding: 10px;
-
-  width: 150px;
+  width: 100%;
 }
 
 .button-search:hover {
@@ -63,63 +63,55 @@ a {
 }
 .main-city {
   color: #645caa;
-  font-size: 90px;
-  font-weight: 500;
-  text-align: left;
+  font-size: 100px;
+  font-weight: 600;
 }
 .main-temperature {
   color: #645caa;
-  font-size: 40px;
-  margin-left: -25px;
+  font-size: 90px;
+  margin-top: -20px;
 }
 
 .main-condition {
   color: hsl(246, 31%, 51%);
-  font-size: 30px;
-  text-transform: capitalize;
-  margin-left: -25px;
+  font-size: 50px;
+  text-transform: uppercase;
 }
 .main-wind {
-  font-size: 30px;
-  opacity: 0.8;
-  margin-left: -35px;
-  margin-bottom: 15px;
+  font-size: 32px;
+  opacity: 0.7;
+  font-weight: 800;
 }
 .main-humidity {
-  font-size: 30px;
-  opacity: 0.8;
-  margin-left: -35px;
+  font-size: 32px;
+  opacity: 0.7;
+  font-weight: 800;
 }
 .update {
   margin-top: 15px;
-  font-size: 15px;
+  font-size: 20px;
   text-align: left;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .metrics {
-  font-size: 40px;
+  font-size: 80px;
 }
 .main-image {
-  margin-top: -130px;
-  margin-left: -50px;
+  padding-left: 100px;
+  margin-top: -20px;
 }
 
 .forecast {
-  margin-top: 15px;
-  margin-bottom: 35px;
-  margin-left: -40px;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
+
 .forecast-day,
 .forecast-temp {
-  font-size: 20px;
-  text-align: center;
+  font-size: 18px;
 }
-.forecast-image {
-  display: block;
-  margin: 0 auto;
-  
-}
+
 .coder {
   font-size: 13px;
 }

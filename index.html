@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,38 +22,76 @@
   </head>
   <body>
     <div class="container">
-    <form id="form">
-        <input type="search" placeholder="Enter your city" class="input" id="input" autocomplete="off" />
-       <input type="submit" value = "Search" class="button-search">
-        <button class="button-current" id="button-current">Current</button>
-       </form>
-        <div id="update" class="update">Updated: <span class="date" id="date"></span> </div>
-           <div class="main-city" id="main-city"></div>
-<div class="row">
-           <div class="col-3">
-            <ul>
-              <li class="main-temperature">
+      <form id="form">
+        <div class="row">
+          <div class="col-6">
+            <input
+              type="search"
+              placeholder="Enter your city"
+              class="input"
+              id="input"
+              autocomplete="off"
+            />
+          </div>
+          <div class="col-3">
+            <input type="submit" value="Search" class="button-search" />
+          </div>
+          <div class="col-3">
+            <button class="button-current" id="button-current">Current</button>
+          </div>
+        </div>
+      </form>
+
+      <div id="update" class="update">
+        Updated: <span class="date" id="date"></span>
+      </div>
+
+      <div class="row">
+        <div class="col-6">
+          <div class="main-city" id="main-city"></div>
+          <div class="row">
+            <div class="col-6">
+              <div class="main-temperature">
                 <span id="main-temperature"></span>
-                <span class = "metrics">°C</span></li>
-                <li>
-                  <span class="main-condition" id="main-condition" ></span>
+                <span class="metrics">°C</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li class="main-wind">
+                  Wind: <span id="main-wind"></span>Km/H
+                </li>
+                <li class="main-humidity">
+                  Humidity: <span id="main-humidity"></span>%
                 </li>
               </ul>
-              </div>
-<div class="col-3">
-              <ul>
-              <li class="main-wind">Wind: <span id ="main-wind"></span>Km/H </li>
-              <li class="main-humidity">Humidity: <span id ="main-humidity"></span>%</li>
-            </ul>
-         </div>
-          <div class="col-6">
-            <img src="" width = 300 alt="clear" class="main-image" id="main-image"/>
+            </div>
           </div>
-         <div class="forecast" id="forecast"> </div>
-          <div class="coder">
-        <a href="https://github.com/OksiMarty/WeatherApp" target="_blank">Open-source code</a>
-         by Oksy Marty
-          </div></div>
+          <div class="row">
+            <div class="col-12">
+              <div class="main-condition" id="main-condition"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <img
+            src=""
+            width="450"
+            alt="clear"
+            class="main-image"
+            id="main-image"
+          />
+        </div>
+      </div>
+
+      <div class="forecast" id="forecast"></div>
+      <div class="coder">
+        <a href="https://github.com/OksiMarty/WeatherApp" target="_blank"
+          >Open-source code</a
+        >
+        by Oksy Marty
+      </div>
+    </div>
     <script src="src/app.js"></script>
   </body>
 </html>
